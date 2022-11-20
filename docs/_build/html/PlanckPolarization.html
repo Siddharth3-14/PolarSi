@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plotting of Magnetic fields from Planck Maps &mdash; PolarSi 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Calculation of plane of the sky Magnetic Fields" href="StructureFunctionAnalysis.html" />
+    <link rel="prev" title="Angular Dispersion function" href="AngularDispersion.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> PolarSi
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="AngularDispersion.html">Angular Dispersion function</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plotting of Magnetic fields from Planck Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#PlanckPolarization.PlanckPolarization"><code class="docutils literal notranslate"><span class="pre">PlanckPolarization()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="StructureFunctionAnalysis.html">Calculation of plane of the sky Magnetic Fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utilities.html">Utilities required for processing polarimetry data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PlotPolarizationAngles.html">Plotting Polarization angles</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PolarSi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Plotting of Magnetic fields from Planck Maps</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/PlanckPolarization.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="plotting-of-magnetic-fields-from-planck-maps">
+<span id="planckpolarization"></span><h1>Plotting of Magnetic fields from Planck Maps<a class="headerlink" href="#plotting-of-magnetic-fields-from-planck-maps" title="Permalink to this heading"></a></h1>
+<p>This function plots the magnetic fields from Planck Polarization vecotrs. The function requires the Planck polarization stokes I,Q and U map in celestial coordiantes (fk5).</p>
+<span class="target" id="module-PlanckPolarization"></span><dl class="py function">
+<dt class="sig sig-object py" id="PlanckPolarization.PlanckPolarization">
+<span class="sig-prename descclassname"><span class="pre">PlanckPolarization.</span></span><span class="sig-name descname"><span class="pre">PlanckPolarization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_stokesI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_stokesQ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_stokesU</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_background</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vector_scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vector_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cyan'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gray'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PlanckPolarization.PlanckPolarization" title="Permalink to this definition"></a></dt>
+<dd><p>This function plots the magnetic fields from Planck Polarization vecotrs. The function requires the Planck polarization stokes I,Q and U map in celestial coordiantes (fk5).
+The function also requires a variable angle_offset which is the angle between the galactic and celestial north at the position of the target</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path_to_stokesI</strong> (<em>string</em>) – relative path to the fits file of the Planck stokes I file in celestial coordinates.</p></li>
+<li><p><strong>path_to_stokesQ</strong> (<em>string</em>) – relative path to the fits file of the Planck stokes Q file in celestial coordinates.</p></li>
+<li><p><strong>path_to_stokesU</strong> (<em>string</em>) – relative path to the fits file of the Planck stokes U file in celestial coordinates.</p></li>
+<li><p><strong>path_to_background</strong> (<em>string</em>) – relative path to the fits file of the background in celestial coordinates.</p></li>
+<li><p><strong>angle_offset</strong> (<em>float</em>) – The angle between the between the galactic and celestial north at the position of the target</p></li>
+<li><p><strong>plotting</strong> (<em>vmax = This parameter controls the minimum cutoff</em><em> of </em><em>the background for</em>) – </p></li>
+<li><p><strong>plotting</strong> – </p></li>
+<li><p><strong>line_width</strong> (<em>float</em>) – This parameter controls the width of the vector</p></li>
+<li><p><strong>steps</strong> (<em>integer</em>) – This paramter controls the vectors skipped. If steps is 1 it plots every vector, default is 2 which plots every second vector</p></li>
+<li><p><strong>vector_scale</strong> (<em>flaot</em>) – This parameter controls the length of the vector</p></li>
+<li><p><strong>vector_color</strong> (<em>string</em>) – Color of the vectors. Default cyan</p></li>
+<li><p><strong>cmap</strong> (<em>string</em>) – Colormap of the background. Default gray</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Plots the magnetic fields from Planck Polarization vectors</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="AngularDispersion.html" class="btn btn-neutral float-left" title="Angular Dispersion function" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="StructureFunctionAnalysis.html" class="btn btn-neutral float-right" title="Calculation of plane of the sky Magnetic Fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Siddharth Kumar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
